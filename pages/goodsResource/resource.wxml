@@ -1,0 +1,61 @@
+<!--pages/qutation/qutation.wxml-->
+
+<!--搭建页面，为wx:if绑定show,关闭按钮绑定触发事件函数closelaye-->
+<view class='layer' wx:if="{{show}}">
+
+  <image class='layer-img'  src='img/tip.png' mode='widthFix' bindtap='turnToCertificate' bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend">
+</image>
+  
+</view>
+
+<view class="">
+  <picker mode="multiSelector" bindcancel="bindcancel" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{activeIndex == 0 ? startmultiIndex:endmultiIndex}}" range="{{activeIndex == 0 ? startmultiArray:endmultiArray}}" range-key="name">
+    <view class="cxj-menu" style="position:fixed;top:0">
+      <view class="flex-view{{item.active?' active':''}}" wx:for="{{tabTxt}}" wx:key="" data-index="{{index}}" bindtap="filterTab">
+        <image src="{{ item.position == 0 ? '../../img/start.png':'../../img/end.png' }}" class="cxj-location_icon"></image>
+        <text>{{item.text}}</text>
+       <image src="../../img/down_arrow.png" class="cxj-icon rotation"></image>
+      </view>
+    </view>
+  </picker>
+
+  <view wx:if="isRegister" style="padding-top:80rpx;width:100%">
+
+    <block wx:for="{{items}}" wx:key="id">
+      <view class="item_view" style='flex-direction:column;'>
+         <view  class='item_location_view' style='margin-top:10px'>
+            <view  style='display:flex; flex-direction:row;height:30px'>
+              <label class='item_text_start_location'>{{item.zct}}</label>
+              <image src="../../img/long_right_arrow.png" class="img"></image> 
+              <label class='item_text_end_location'>{{item.xct}}</label>
+            </view>
+            <label class='item_time'>{{item.ctm}}</label>
+          </view>
+           <view style='display:flex; flex-direction:row; height:30px;'>
+            <label class='item_detail'>{{(item.te == 1 ? "整车":"零担") +
+             (carType[item.ct] == undefined ? "":"/" +carType[item.ct]) + 
+             (carLong[item.cl] == undefined ? "":"/" + carLong[item.cl])}}</label>
+
+             <label class='item_detail'>{{(item.on) +
+             (item.dw == 0 ? "":"/" + item.dw + "吨") + 
+             (item.dv == 0 ? "":"/" + item.dv + "方")}}</label>
+
+          </view>
+          <view style='display:flex; flex-direction:row; height:30px;'>
+            <label class='item_tip'>实际运费:</label>
+            <label class='item_tip_detail' style='color:#ff0000'>{{item.qt + "元"}}</label>
+            <label class='item_tip'>距离:</label>
+            <label class='item_tip_distance' style='color:#333333'>{{ item.dis + "km"}}</label>
+          </view>
+
+           <view class="item_line"/>
+          
+      </view>
+    </block>
+  </view>
+
+  <view hidden="{{isRegister}}" style="padding-top:300rpx;width:100%;">
+    <button bindtap="toLogin" style="width:380rpx;font-size: 28rpx;">登录后可查看货运行情</button>
+  </view>
+
+  </view>

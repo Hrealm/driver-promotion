@@ -1,0 +1,32 @@
+<!--pages/signature/bank/bank.wxml-->
+<view style="width:100%; height:100%">
+
+  <view class="{{ bindBank == '' ? 'bankcard_hide':'bankcard_show'}}" >
+    
+    <view class="bankcard_container">
+
+     <label class="bank_carno_label">{{bindCarNo}}</label>
+     
+      <view class="bankcard" style="background:{{bindBankCode == '' ? '':bankitems[bindBankCode].bgcolor}};">
+        <view class="header_view" >
+          <view class="image_root_view">
+              <image class="image_white"/>
+              <image class="image_inner" src="{{bindBankCode == '' ? '': '../../../img/'+bankitems[bindBankCode].iconnormal}}"/>
+          </view>
+
+          <view class="bank_label_view">
+              <label class="bank_name_label">{{bindBank.sn}}</label>
+              <label class="bank_type_label">储蓄卡</label>
+          </view>
+        </view>
+
+        <image class="image_right" mode="aspectFill" src="{{bindBankCode == '' ? '': '../../../img/'+bankitems[bindBankCode].iconwhite}}"/>
+      </view>     
+    </view>
+    
+  </view>
+
+  <view class="add-wrap">
+    <label bindtap="deleteCard" class="bottom_btn" style="color:{{ bindBank == '' ? '#11cd6e':'#ff0000'}}">{{bindBank == '' ? "添加银行卡":"解绑银行卡"}}</label>
+  </view>
+</view>

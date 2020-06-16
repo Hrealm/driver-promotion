@@ -1,0 +1,178 @@
+/* pages/qutation/qutation.wxss */
+
+.item_view{
+  background:#FFFFFF;
+  text-align: left;
+  width: 100%;
+  height:100px;
+}
+
+.item_line{
+  background:#F2F3F7;
+  text-align: left;
+  width: 100%;
+  height:10px;
+}
+
+.item_location_view{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 30px;
+}
+
+.item_text_start_location{
+  margin-left: 10px;
+  font: 16px arial;
+  color: #333333;
+  display: flex;
+  text-align: center;
+}
+
+.item_text_end_location{
+  font: 16px arial;
+  color: #333333;
+  display: flex;
+}
+
+.item_time{
+  font: 12px arial;
+  margin-top: 4px;
+  margin-right: 10px;
+  color: #999999;
+}
+
+.item_detail{
+  font: 12px arial;
+  color: #999999;
+  margin-left: 10px;
+}
+
+.item_tip{
+  font: 12px arial;
+  color: #999999;
+  margin-left: 10px;
+}
+
+.item_tip_detail{
+  font: 12px arial;
+  color: #999999;
+  line-height: 20px;
+}
+
+.item_tip_distance{
+  font: 12px arial;
+  color: #999999;
+  line-height: 20px;
+}
+
+.img{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+
+.cxj-menu {
+  background-color: #f5f5f5;
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 32rpx;
+}
+
+.cxj-menu .active .rotation {
+  transform: rotate(180deg);
+  background: none;
+}
+.cxj-menu .active {
+  background-color: #fff;
+}
+.flex-view {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.cxj-location_icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.cxj-icon {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.cxj-content {
+  width: 750rpx;
+  font-size: 28rpx;
+}
+
+.cxj-content-li {
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.cxj-tab-layout {
+  width: 750rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 80rpx;
+  z-index: 1;
+  border-bottom: solid 1px #eee;
+  height: 100%;
+  background-color: rgba(000,000,000,.5);
+  
+}
+
+.cxj-tab-layout .active {
+  color: #00aa14;
+}
+
+.cxj-tab-layout view {
+  width: 750rpx;
+  text-indent: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #e7e7e7;
+  background-color:#ffffff;
+  
+}
+
+.layer{
+  width:100vw;
+  height: 100vh;
+  position: fixed;
+  top:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99999944;
+}
+.layer-img{
+  width: 80%;                     /*弹窗广告图片的大小*/
+}
+
+.colse-icon{
+  display: flex;
+  width: 30px;
+  position: absolute;              /*设置为绝对定位，调整关闭按钮的位置*/
+  top:80px;
+  right: 30px;
+}

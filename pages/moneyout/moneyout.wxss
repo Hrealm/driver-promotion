@@ -1,0 +1,90 @@
+/* pages/moneyout/moneyout.wxss */
+
+.rootview{
+  background-color: #f2f6fb;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.cardview{
+  border-radius: 10rpx;
+  background-color: white;
+  top:20rpx;
+  margin: 25rpx;
+  display: flex;
+  flex-direction: column;
+  height: 350rpx;
+}
+
+.itemlabel{
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 50rpx;
+}
+
+.itemview{
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  margin: 30rpx;
+  text-align: bottom;
+}
+
+.itembottom{
+  flex-direction: row;
+  display: flex;
+  top:280rpx;
+  padding: 20rpx;
+  width: 100%;
+}
+
+.weui-input{
+  width: 100%;
+  margin-left: 35rpx;
+  padding: 5rpx; 
+  font-size: 45rpx;
+}
+
+.item_out_label{
+  flex: 1; /* 重要 */
+}
+
+.item_tip_label{
+  font-size: 25rpx;
+  color:#333333;
+  line-height: 30rpx;
+}
+
+.item_out_btn{
+  position:relative;
+  color: #0B83FD;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  width: 100px;
+  
+}
+
+.label_view{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 25rpx 0 25rpx ;
+
+}
+
+.label_tip{
+  
+  font-size: 25rpx;
+  color:#707070;
+  /* margin-right: 20rpx;
+  margin-left: 20rpx; */
+}
+
+.btn-area{
+  box-sizing:border-box;
+  width: 100%;
+  padding: 0 30rpx;
+  margin-top: 200rpx;
+}

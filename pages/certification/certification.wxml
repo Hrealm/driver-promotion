@@ -1,0 +1,83 @@
+<!--pages/certification/certification.wxml-->
+<!-- <text>pages/certification/certification.wxml</text> -->
+
+<view class="container">
+
+	<view class="personal_info">
+		<text class="ic_title">请上传身份证正面</text>
+		<view class="w_img">
+			<image src="{{idCard_img}}" class="idCardImg" bindtap="idCard"></image>
+		</view>
+		<!-- <text class="imgTip">身份证人面像</text> -->
+		<view class="w_input">
+			<input class="name_input" value="{{nameInput}}" bindinput="bindNameInput" placeholder="姓名" />
+		</view>
+	</view>
+
+	<view class="personal_info">
+		<text class="ic_title">请上传驾驶证正面</text>
+		<view class="w_img">
+			<image src="{{driverCard_img}}" class="idCardImg" bindtap="driverCard"></image>
+		</view>
+		<view class="w_input">
+			<input class="name_input" value="{{idInput}}" type="idcard" bindinput="bindIdInput" placeholder="身份证号" />
+		</view>
+	</view>
+
+
+
+	<view class="personal_info">
+		<text class="ic_title">请上传行驶证</text>
+		<view class="w_img v_imgs">
+			<image src="{{vehicleHomepage_img}}" class="vehicleImg" bindtap="vehicleHomepage"></image>
+			<image src="{{vehicleVicepage_img}}" class="vehicleImg" bindtap="vehicleVicepage"></image>
+		</view>
+		<view class="w_input v_inputs">
+			<input class="name_input v_input" value="{{numberPlate}}" maxlength="7" bindinput="bindNumberPlate" placeholder="车牌号" />
+			<input class="name_input v_input" value="{{total}}" type="number" maxlength="8" bindinput="bindtotal" placeholder="总质量" />
+		</view>
+		<view class="w_input v_inputs _newAdd">
+			<input class="name_input v_input" value="{{ctds}}" bindinput="bindctds" placeholder="车辆类型" />
+			<input class="name_input v_input" value="{{wl}}" bindinput="bindwl" placeholder="核定载质量" />
+		</view>
+		<view class="w_input v_inputs _newAdd">
+			<input class="name_input v_input" value="{{vin}}" bindinput="bindvin" placeholder="车辆识别代号" />
+			<input class="name_input v_input" value="{{cwn}}" bindinput="bindcwn" placeholder="车辆所有人" />
+		</view>
+	</view>
+
+	<view class="personal_info">
+		<picker bindchange="bindColorChange" value="{{lpc_index}}" range="{{lpc_Array}}">
+			<view class="lpc_picker">
+				<text class="lp_color">车牌颜色</text>
+				<text class="lp_color_value {{lpc_index == 0 ? '' : 'lpc_value'}}">{{lpc_Array[lpc_index]}}</text>
+			</view>
+		</picker>
+		<picker mode="multiSelector" bindchange="bindMultiPickerChange" range-key="title" value="{{multiIndex}}" range="{{multiArray}}">
+			<view class="model_captain_picker lpc_picker">
+				<text class="model_captain lp_color">车型车长</text>
+				<text class="model_captain_value lp_color_value {{multiIndex[0] == 0 ? '' : multiIndex[1] == 0 ? '' : 'lpc_value'}}">{{multiArray[0][multiIndex[0]].title}}，{{multiArray[1][multiIndex[1]].title}}</text>
+			</view>
+		</picker>
+	</view>
+
+	<view class="personal_info">
+		<text class="ic_title">请上传道路运输证</text>
+		<text class="tp_tip">(4.5吨以上车辆请上传道路运输证)</text>
+		<view class="w_img">
+			<image src="{{transportation_img}}" class="idCardImg" bindtap="transportationCard"></image>
+		</view>
+		<view class="w_input">
+			<input class="name_input" value="{{licenseInput}}" bindinput="bindLicenseInput" placeholder="道路运输证号" />
+		</view>
+	</view>
+
+	<view class="btn-area">
+		<button style="margin: 30rpx auto; width:100%; height:80rpx;background-color:#0B83FD;" type="primary" bindtap="submit">{{textBtn}}</button>
+	</view>
+
+
+
+
+
+</view>

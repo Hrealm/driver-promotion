@@ -1,0 +1,76 @@
+/* pages/login/login.wxss */
+.container {
+  padding: 0;
+  min-height: 100vh;
+  align-items: flex-start;
+}
+
+
+.form{
+  width: 100%;
+  padding-top: 180rpx;
+}
+
+.page-section{
+  position: relative;
+}
+
+.l_input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx 30rpx;
+}
+
+.ph-img{
+  width: 65rpx;
+  height: 65rpx;
+  margin-top: 25rpx;
+}
+
+.pwd-img{
+  width: 50rpx;
+  height: 50rpx;
+  padding-left: 8rpx;
+  margin-top: 25rpx;
+}
+
+.weui-input{
+  width: 100%;
+  margin-left: 15rpx;
+  margin-top: 25rpx;
+  padding: 5rpx; 
+  padding-bottom: 10rpx;
+  font-size: 36rpx;
+  border-bottom: 1px solid #B4B4B4;
+}
+
+.btn-area{
+  box-sizing:border-box;
+  width: 100%;
+  padding: 0 30rpx;
+  margin-top: 200rpx;
+}
+
+.getph-btn{
+  position: absolute;
+  top: 35rpx;
+  right: 25rpx;
+  padding: 12rpx;
+  font-size: 30rpx;
+  font-weight: normal;
+  color: #B4B4B4;
+  z-index: 99;
+}
+
+.lg_bottom{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 35rpx;
+  text-align: right;
+  margin-top: 15rpx;
+}
+
+.lg_login{
+  color: #0B83FD;
+}

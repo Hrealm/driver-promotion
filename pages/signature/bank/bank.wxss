@@ -1,0 +1,115 @@
+/* pages/signature/bank/bank.wxss */
+
+.bankcard_hide{
+  display: none;
+}
+
+.bankcard_show{
+  display: block;
+}
+
+.bankcard_container{
+  position: relative;
+}
+
+
+.bankcard{
+  border-radius: 5px;
+  margin: 5px;
+  display:flex; 
+  flex-direction:row;
+}
+
+.header_view{
+  width: 100%;
+  height:150px;
+  display:flex; 
+  border-radius: 5px;
+  border-width: 1px;
+  flex-direction:row;
+}
+
+.image_root_view{
+  width:50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.image_white{
+  background: #FFFFFF;
+ border-radius: 50%;
+ width: 50px;
+ height: 50px;
+ position: absolute;
+ opacity: 0.8;
+}
+
+.image_inner{
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
+  position: absolute;
+}
+
+.image_right{
+  width: 200px;
+  height: 120px;
+  margin-top: 40px;
+  opacity: 0.3;
+}
+
+.bank_label_view{
+  display:flex;
+  flex-direction:column;
+  height:30px;
+  margin-top:20px;
+  margin-left: 10px;
+}
+
+.bank_name_label{
+  font: normal;
+  font-size: 35rpx;
+  color: #FFFFFF;
+}
+
+.bank_type_label{
+  font: normal;
+  margin-top: 5px;
+  font-size: 25rpx;
+  color: #FFFFFF;
+}
+
+.bank_carno_label{
+  width: 100%;
+  height: 40px;
+  margin-left: 30px;
+  margin-top: 80px;
+  position: absolute;
+  font-size: x-large;
+  color: #FFFFFF;
+  z-index: 3;
+}
+
+.add-wrap{
+  position:fixed;
+  display: flex;
+  bottom:0px;
+  width:100%;
+  justify-content: center;
+}
+
+.bottom_btn{
+  width: 200px;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: #f2f2f7;
+  border-radius: 5px;
+  justify-content: center;
+  font-size: normal;
+  display: flex;
+  align-items: center;
+}

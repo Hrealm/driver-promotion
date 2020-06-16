@@ -1,0 +1,7 @@
+<!--pages/testocr/testocr.wxml-->
+<!-- <text>pages/testocr/testocr.wxml</text> -->
+<view>
+  <ocr-navigator bind:onSuccess="driverSuccess" certificateType="drivingLicense" selectedOptions="{{['plateNum','vehicleType','owner']}}">
+    <button type="primary">行驶证识别</button>
+  </ocr-navigator>
+</view>

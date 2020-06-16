@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText":"银行卡",
+  "enablePullDownRefresh":true
+}

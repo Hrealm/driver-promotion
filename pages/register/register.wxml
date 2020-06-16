@@ -1,0 +1,47 @@
+<!--pages/register/register.wxml-->
+<!-- <text>pages/register/register.wxml</text> -->
+
+
+<view class="container">
+
+
+	<!-- 表单 -->
+	<view class="form">
+		<!-- <form catchsubmit="{{ submit? '' : '' }}"> -->
+			<form catchsubmit="formSubmit">
+			<view class="page-section">
+
+				<label class="l_input">
+					<image class="ph-img" src="img/ph.png"></image>
+					<!-- <text class="">手机号：</text> -->
+					<input class="weui-input" name="ph" type="number"  maxlength="11" bindinput="bindKeyInput" value="{{hid_ph}}" placeholder="请输入手机号" />
+					<!-- <button open-type="getPhoneNumber" class="getph-btn" style="width:250rpx;color:#000;" bindgetphonenumber="getPhoneNumber">获取手机号码</button> -->
+				</label>
+				<button open-type="getPhoneNumber" class="getph-btn" style="width:250rpx;color:#000;" bindgetphonenumber="getPhoneNumber">获取手机号码</button>
+
+				<label class="l_input">
+					<image class="ph-img" src="img/nickName.png"></image>
+					<input class="weui-input" name="name"  bindinput="bindNameInput" value="{{user_name}}" placeholder="请输入用户名称" />
+				</label>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="getph-btn getuser-info" style="width:250rpx;color:#000;" >获取微信昵称</button>
+
+				<label class="l_input">
+					<image class="pwd-img" src="img/pwd.png"></image>
+					<!-- <text>密　码：</text> -->
+					<input class="weui-input" name="pwd" type="password" maxlength="16" bindinput="bindPwdInput" value="{{v_pwd}}" placeholder="请输入6~16位密码" />
+				</label>
+			</view>
+
+			<view class="btn-area">
+				<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="margin: 10rpx auto; width:100%; height:100rpx;background-color:#0B83FD;" type="primary" formType="submit">下一步</button> -->
+				<button style="margin: 10rpx auto; width:100%; height:80rpx;background-color:#0B83FD;" type="primary" formType="submit">下一步</button>
+			</view>
+		</form>
+	</view>
+
+	<view class="lg_bottom">
+		<text class="lg_desc">已有账号，</text>
+		<text class="lg_login" bindtap="login">登录</text>
+	</view>
+
+</view>

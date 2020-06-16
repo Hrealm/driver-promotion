@@ -1,0 +1,33 @@
+<!--pages/moneyoutlist/moneyoutlist.wxml-->
+
+<view class="">
+  <block wx:for="{{items}}" wx:key="id">
+    <view class="item_view" style='flex-direction:column; margin-top:10px'>
+         <view  class='item_location_view'>
+              <view  style='display:flex; flex-direction:row;height:30px'>
+                <label class='item_tip'>流水号:</label>
+               <label class='item_tip_detail'>{{item.id}}</label>
+              </view>
+              <label class='item_time'>{{item.ctm}}</label>
+          </view>
+
+          <view  class='item_location_view' style='margin-top:10px'>
+              <view  style='display:flex; flex-direction:row;height:30px'>
+                <label class='item_tip'>金额:</label>
+                <label class='item_tip_detail' style="color:red">{{item.amt}}元</label>
+              </view>
+
+              <view  style='display:flex; flex-direction:row;height:30px'>
+                <label class='item_tip'>状态:</label>
+                <label wx:if="{{item.st == 1}}" class='item_tip_detail' style="color:#373CD6"  >待审核</label>
+                <label wx:elif="{{item.st == 2}}" class='item_tip_detail' style="color:#373CD6"  >银行处理中</label>
+                <label wx:elif="{{item.st == 3}}" class='item_tip_detail' style="color:#AAAAAA"  >已撤销</label>
+                <label wx:elif="{{item.st == 4}}" class='item_tip_detail' style="color:#1EBC71"  >已到账</label>
+              </view>
+          </view>
+
+          <view class="item_line"/>
+    </view>
+  </block>
+
+</view>

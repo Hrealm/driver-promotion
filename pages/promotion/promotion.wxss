@@ -1,0 +1,313 @@
+/* pages/promotion/promotion.wxss */
+button[plain]{border:0}
+
+.btn2 {
+  width:250rpx;
+  height:60rpx;
+  background-color: #35ba4f;
+  color: white;
+  font-size: 30rpx;
+  border-radius: 5rpx; 
+  line-height: 60rpx;
+  text-align: center;
+  font-weight: 300;
+  position:fixed;
+  bottom:10rpx;
+  left:50%;
+  align-items:center;
+  justify-content:center;
+  display:flex;
+  transform:translate(-50%,-50%);
+}
+
+.btn2::after {
+  border-radius: 10rpx;
+  border: 0; 
+}
+
+.invite {
+  width:250rpx;
+  height:60rpx;
+  background-color: #35ba4f;
+  color: white;
+  font-size: 40rpx;
+  border-radius: 5rpx; 
+  line-height: 60rpx;
+  text-align: center;
+  font-weight: 300;
+  position:fixed;
+  bottom:10rpx;
+  left:50%;
+  align-items:center;
+  justify-content:center;
+  display:flex;
+  transform:translate(-50%,-50%);
+}
+
+.invite::after {
+  border-radius: 10rpx;
+  border: 0; 
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty .title {
+  font-size: 30rpx;
+  margin: 200rpx 50rpx 50rpx;
+  color: #444;
+}
+
+.item
+{
+  height:150rpx;
+  display: flex;
+  flex-direction:column;
+}
+
+.item .horizontal
+{
+  height:150rpx;
+  display: flex;
+  flex-direction:row;
+  margin-top:20rpx;
+}
+
+.plate_icon
+{
+  position:relative;
+  align-items:center;
+  display:flex;
+  justify-content:center; 
+}
+
+.plate {
+  width: 150rpx;
+  height:80rpx;
+  display: inline-block;
+  line-height:50rpx;
+  align-items:center;
+  padding:25rpx;
+  color:#929aa6;
+  flex-grow:0;
+  flex-shrink:0;
+}
+
+.image {
+  width: 150rpx;
+  height: 80rpx;
+  display:flex;
+  align-items:center;
+  display:flex;
+  justify-content:center; 
+}
+
+.plate_number {
+  width: 150rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  line-height:80rpx;
+}
+
+.phone_icon {
+  width: 50rpx;
+  height:50rpx;
+  display: inline-block;
+  line-height:50rpx;
+  align-items:center;
+  padding:25rpx;
+  color:#929aa6;
+  flex-grow:0;
+  flex-shrink:0;
+}
+
+.vertical
+{
+  flex:1;
+  display: flex;
+  flex-direction:column;
+}
+
+.vertical .title
+{
+  display: flex;
+  flex-direction:row;
+}
+
+.name
+{
+  margin-left:20rpx;
+  font-size:35rpx;
+  color:#424242;
+}
+
+.phone
+{
+  margin-left:20rpx;
+  font-size:35rpx;
+  color:#B2B2B2
+}
+
+.copy
+{
+  width:50rpx;
+  height:30rpx;
+  border: 1rpx solid #0195ff;
+  margin-left:20rpx;
+  font-size:20rpx;
+  color:#0195ff;
+  padding:5rpx;
+  border-radius: 5rpx;
+  line-height:30rpx;
+  text-align:center;
+  margin-top:5rpx;
+}
+
+.time
+{
+  height:40rpx;
+  margin-left:20rpx;
+  font-size:25rpx;
+  color:#B2B2B2;
+  align-items: center;
+  line-height:30rpx;
+  padding-top:30rpx;
+}
+
+.vertical .content
+{
+  display: flex;
+  flex-direction:row;
+}
+
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modals .modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modals .bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  height: 300rpx;
+  /* background-color: #fff; */
+}
+
+/*动画前初始位置*/
+.modals .bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.modals .btn {
+  background: rgba(255, 255, 255, 0.82);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700rpx;
+  height: 97rpx;
+  justify-content: center;
+  font-size: 34rpx;
+  border-radius: 0;
+}
+
+.modals .sendFriends {
+  background: rgba(255, 255, 255, 0.82);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 97rpx;
+  justify-content: center;
+  font-size: 34rpx;
+  width: 700rpx;
+  border-radius: 0;
+}
+
+.modals .borderCl {
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.modals .cancel {
+  margin: 16rpx 0;
+}
+
+.item_top_line{
+  background:#F2F3F7;
+  align-items:right;
+  justify-content:right;
+  width: 105%;
+  height:1px;
+}
+
+.item_line{
+  background:#F2F3F7;
+  align-items:right;
+  justify-content:right;
+  margin-left:25%;
+  width: 75%;
+  height:1px;
+}
+
+.canvas{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin: 0 auto;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  right: -900px;
+  top: -2500px;
+}
+
+
+.layer{
+  width:100vw;
+  height: 100vh;
+  position: fixed;
+  top:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer-img{
+  width: 100%;                     /*弹窗广告图片的大小*/
+}
+
+.colse-icon{
+  display: flex;
+  width: 30px;
+  position: absolute;              /*设置为绝对定位，调整关闭按钮的位置*/
+  top:80px;
+  right: 30px;
+}

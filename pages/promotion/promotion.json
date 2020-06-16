@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "好友列表",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "poster": "../miniprogram_dist/poster"
+  },
+  "enablePullDownRefresh":true
+}

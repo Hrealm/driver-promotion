@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "行情",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "region-picker": "/pages/region_picker/region_picker"
+  },
+  "enablePullDownRefresh":true
+}

@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<image src="{{srcPath}}" mode='aspectFit' class="image"></image>
+
+<view class='shareButton' bindtap='createImageFromCanvas'>保存到相册</view>
+<button class="shareToFriends" plain="true" open-type="share" style='font-weight:300;color:white;width:280rpx;height:80rpx;font-size:40rpx;padding:0;'>发送给朋友</button>
+<view class="rules" bindtap='jumpToRulesPages'>活动规则>></view>

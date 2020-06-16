@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/qutation/qutation",
+    "pages/certification/certification",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/testocr/testocr",
+    "pages/signature/setting/bankcarsetting",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/promotion/promotion",
+    "pages/post/post",
+    "pages/share/share",
+    "pages/moneyoutlist/moneyoutlist",
+    "pages/signature/bank/bank",
+    "pages/rules/rules",
+    "pages/moneyout/moneyout",
+    "pages/goodsResource/resource"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中象福达司机",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "ocr-plugin": {
+      "version": "3.0.3",
+      "provider": "wx4418e3e031e551be"
+    }
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/qutation/qutation",
+        "text": "行情",
+        "iconPath": "img/qutation_unselect.png",
+        "selectedIconPath": "img/qutation_select.png"
+      },
+      {
+        "pagePath": "pages/promotion/promotion",
+        "text": "分享",
+        "iconPath": "img/share_unselect.png",
+        "selectedIconPath": "img/share_select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/mine_unselect.png",
+        "selectedIconPath": "img/mine_select.png"
+      }
+    ]
+  }
+}

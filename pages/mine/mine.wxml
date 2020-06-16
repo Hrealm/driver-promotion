@@ -1,0 +1,34 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <view class="item_line"/>
+  <view class="header_view">
+      <view  class="header_label_view">
+          <label class='header_label'>余额</label>
+          <label class='header_label'>{{"￥"+moneyCanOut}}</label>
+      </view>
+
+       <view class="header_label_view">
+          <button wx:if="{{isRegister}}" class="button" bindtap="moneyOutAction" style="width:100px;">提现</button>
+          <button wx:else class="button" bindtap="toLogin" style="width:100px;">去登录</button>
+      </view>
+  </view>
+  <view class="item_line"/>
+  <button bindtap="signature" class="bottom_item_label"  style="width:100%;" >银行卡</button>
+  <view class="item_line"/>
+  <button bindtap="moneylist" class="bottom_item_label"  style="width:100%;" >提现明细</button>
+  <view class="item_line"/>
+  <button bindtap="qulification" class="bottom_item_label"  style="width:100%;" >资质认证</button>
+  <view class="item_line"/>
+
+ <view class="add-wrap">
+    <view class="bottom_btn" bindtap="service_phone" style='display:flex; flex-direction:column; height:30px;'>
+        <label class='item_tip'>客服电话</label>
+        <label class='item_tip_detail' style='color:#0B83FD'>400-666-7056</label>
+    </view>
+  </view>
+</view>
+
+<modal hidden="{{hiddenmodalput}}" title="请输入提现金额" confirm-text="提交" cancel-text="取消" bindcancel="cancel"    bindconfirm="confirm">
+    <input value='{{moneyOut}}' type='number' placeholder="提现金额大于{{limitNum}}元" bindinput="moneyOutChange" bindconfirm="moneyOutChange" cursor-spacing="100"
+    bindblur="moneyOutChange" auto-focus/>
+</modal>

@@ -1,0 +1,61 @@
+<!--搭建页面，为wx:if绑定show,关闭按钮绑定触发事件函数closelaye-->
+<view class='layer' wx:if="{{show}}">
+
+  <image class='layer-img'  src='share.png' mode='widthFix' bindtap='turnToRule'>
+</image>
+  
+  <view class='colse' bindtap='closelaye'><!--关闭按钮-->
+    <image class='colse-icon' src='close.png' mode='widthFix'></image>
+  </view>
+</view>
+
+<view>
+  <block wx:if="{{ items.length }}">
+    <view class="item" wx:for="{{items}}">
+      <view class="item_top_line"/>
+      <view class="horizontal">
+        <view class="plate_icon">
+          <image src="../../img/car_plate_unverified.png" class="image"></image>
+          <text class="plate_number">{{item.cn}}</text>
+        </view>
+        <view class="vertical">
+          <view class="title">
+            <text class="name">{{item.ne}}</text>
+            <text class="phone">{{item.ph}}</text>
+            <text class="copy" bindtap="copyPhone">复制</text>
+          </view>
+          <view class="content">
+            <text class="time" bindtap="call">{{item.ctm}}</text>
+          </view>
+        </view>  
+        <view>
+          <image src="../../img/phone.png" class="phone_icon"></image>
+        </view>
+      </view>
+      <view class="item_line"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <text class="title">暂无好友</text>
+    </view>
+  </block>
+
+</view>
+
+<view>
+    <!-- <button wx:if="{{!hasUserInfo}}" plain="true" style='font-weight:300;background:#35ba4f;color:white;width:250rpx;height:60rpx;'class="invite" open-type="getUserInfo" bindgetuserinfo="getUserInfo">邀请</button> -->
+<!-- 
+    <view class="btn2" bindtap="navigateToPost">邀请</view> -->
+</view>
+
+<!-- <canvas canvas-id='qrcodeCanvas' disable-scroll="true" class='canvas' bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></canvas> -->
+<poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+</poster>
+
+<view class="btn2" wx:if="{{ ! isLogin }}" bindtap="navigateToPost">邀请</view> 
+<view class="btn2" wx:else bindtap="onCreatePoster">邀请</view>
+
+
+<!--
+<button bindtap="onCreateOtherPoster">异步生成海报二</button> -->

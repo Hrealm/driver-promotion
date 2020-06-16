@@ -1,0 +1,63 @@
+<!--pages/signature/setting/bankcarsetting.wxml-->
+<view style=" background-color:#f2f3f7;width:100%;height100%">
+
+  <view >
+      <view class="item_container">
+          <view class="itemr_view" >
+            <label class="bank_name_label">卡号</label>
+            <input maxlength="22" bindinput="carNoInput" value="{{cardNo}}" class="weui-input input" type="number" placeholder="请输入银行卡号" />
+          </view>
+
+          <image bindtap="bankCardOcr" class="image_right" mode="aspectFill" src="img/take_photo.png"/>
+      </view>
+
+      <view class="item_container" style="margin-top:1px">
+          <view class="itemr_view" >
+            <label class="bank_name_label">银行名称</label>
+            <picker bindchange="bindPickerChange" range-key="sn" value="{{selectedBank}}" range="{{banklist}}">
+              <view class="picker">
+                {{selectedBank == undefined ? "--请选择银行卡归属银行--":selectedBank.sn}}
+              </view>
+            </picker>
+          </view>
+
+      </view>
+
+      <view class="item_container" style="margin-top:10px">
+          <view class="itemr_view" >
+            <label class="bank_name_label">账户姓名</label>
+             <input bindinput="carNameInput" class="weui-input input" value="{{cardName}}" placeholder="请输入银行账户姓名" />
+          </view>
+
+      </view>
+
+      <view class="item_container" style="margin-top:1px">
+          <view class="itemr_view" >
+            <label class="bank_name_label">电话</label>
+             <input maxlength="11" bindinput="phoneInput" class="weui-input input"  type="number" placeholder="请输入银行留存电话" />
+          </view>
+
+      </view>
+
+      <view class="item_container" style="margin-top:1px">
+          <view class="itemr_view" >
+            <label class="bank_name_label">身份证号</label>
+             <input maxlength="18" bindinput="idCardNoInput" class="weui-input input" value="{{idCardNo}}" type="idcard" placeholder="请输入银卡开户身份证号" />
+          </view>
+          <image bindtap="idCardOcr" class="image_right" mode="aspectFill" src="img/take_photo.png"/>
+      </view>
+
+      <view class="item_container" style="margin-top:1px">
+          <view class="itemr_view" >
+            <label class="bank_name_label">账户类型</label>
+            <label class="">借记卡</label>
+          </view>
+
+      </view>
+
+  </view>
+
+  <view class="add-wrap">
+    <label class="bottom_btn" bindtap="addCardCheck">绑定</label>
+  </view>
+</view>

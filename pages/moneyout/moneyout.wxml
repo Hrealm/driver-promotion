@@ -1,0 +1,34 @@
+<!--pages/moneyout/moneyout.wxml-->
+
+<view class="rootview">
+
+  <view style="height:1rpx"></view>
+  <view class="cardview">
+      <label class="itemlabel" style="margin:30rpx;color=#333333;">提现金额</label>
+
+      <view class="itemview" style="height:80rpx">
+        <label style="height:40rpx;line-height:40rpx;margin-top:10rpx">￥</label>
+
+        <input  style="height:50rpx" class="weui-input" type="digit"  bindinput="moneyOutChange" value="{{moneyout}}" placeholder="" />
+      </view>
+
+      <view class="itembottom" style="position:absolute">
+        <view class="item_out_label" style="display: flex;flex-direction: row;">
+          <label class="item_tip_label">可提现金额</label>
+          <label class="item_tip_label" style="color:#FB4E09">{{moneyCanOut}}</label>
+          <label class="item_tip_label">元</label>
+        </view>
+
+        <label class="item_out_btn" bindtap="moneyOutAll">全部提现</label>
+      </view>
+
+  </view>
+  <view class="label_view">
+    <image src="/img/money_out_info.png" style="width:35rpx;height:35rpx;"></image>
+    <text class="label_tip">累计{{limitNum}}元即可提现,提现审核通过后，预计2小时内到账，最晚48小时。</text>
+  </view>
+
+  <view class="btn-area">
+      <button style="margin: 10rpx auto; width:100%; height:80rpx;background-color:#0B83FD;" type="primary" bindtap="moneyoutaction">确认提现</button>
+  </view>
+</view>
