@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "blueimp-load-image": "^5.12.0",
-    "crypto-js": "^3.3.0"
+    "crypto-js": "^4.2.0"
   },
   "devDependencies": {},
   "scripts": {
